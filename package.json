@@ -1,0 +1,17 @@
+{
+  "name": "emplettes",
+  "version": "1.0.0",
+  "description": "emplettes, A phygital market. shopped, shop and shopping",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Idris Yakub <olayinkayakub01@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "lefthook": "^1.7.18"
+  }
+}
