@@ -4,7 +4,7 @@
   "description": "emplettes, A phygital market. shopped, shop and shopping",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commitlint": "commitlint --edit $1"
   },
   "keywords": [],
   "author": "Idris Yakub <olayinkayakub01@gmail.com>",
@@ -12,6 +12,9 @@
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
-    "lefthook": "^1.7.18"
+    "lefthook": "^1.7.18",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.2"
   }
 }

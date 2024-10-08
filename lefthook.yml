@@ -6,10 +6,14 @@
 pre-commit:
   parallel: true
   commands:
-    eslint:
+    eslint-client:
       tags: client app
-      glob: "*.{js,ts,jsx,tsx}"
-      run: npm eslint {staged_files}
+      glob: "src/emplettes.client/**/*.{js,ts,jsx,tsx}"
+      run: cd src/emplettes.client && npm run lint
+    eslint-server:
+      tags: server app
+      glob: "src/emplettes.server/**/*.{js,ts}"
+      run: cd src/emplettes.server && npm run lint
     commitlint:
       run: npm run commitlint
 #     rubocop:
@@ -29,9 +33,17 @@ pre-commit:
 #       runner: go run
 #
 pre-push:
+  parallel: true
   commands:
-    build:
-      run: cd src/emplettes.client &&npm run build
+    build-client:
+      tags: client app
+      run: cd src/emplettes.client && npm run build
+#    test-client:
+#      run: cd src/emplettes.client && npm run test
+    build-server:
+      run: cd src/emplettes.server && npm run build
+#    server-test:
+#      run: cd src/emplettes.server && npm run test
 #     packages-audit:
 #       tags: frontend security
 #       run: yarn audit
